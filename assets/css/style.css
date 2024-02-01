@@ -1,0 +1,488 @@
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: 'Lato-Regular', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Lato-Regular", sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  --docwidth: 90%;
+  font-size: 1rem;
+  font-family: "Lato-Regular", sans-serif;
+}
+/* variable = permet de créer des raccourcis  */
+img,
+input {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+#sec1 {
+  margin: 1rem;
+}
+
+#sec2 {
+  margin: 0;
+}
+#navbar {
+  display: none;
+}
+
+#navbar.is-active {
+  display: block;
+}
+
+.fa-bars {
+  cursor: pointer;
+}
+
+header nav {
+  display: flex;
+  justify-content: unset;
+  position: absolute;
+  align-items: center;
+  z-index: 1;
+  padding: 0.5rem;
+  color: grey;
+  width: 100%;
+  position: fixed;
+  height: 5vh;
+}
+
+#logo {
+  margin-right: 20px;
+}
+
+#navbar {
+  position: absolute;
+  background-color: white;
+  top: 2rem;
+  left: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  width: 90%;
+}
+
+#navbar li {
+  text-align: justify;
+  margin: 1rem;
+  color: grey;
+}
+.portfolio {
+  background-image: url(/assets/img/parallax2.jpg);
+  height: 30vh;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.modalPort{
+    position: absolute;
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* display: grid; */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    left: 10rem;
+    top: 2.5rem;
+    width: 60%;
+}
+
+.modalPort Img{
+    width: 23%;
+    background-size: cover;
+    background-position: center;
+}
+
+.txt-parralax1 {
+  position: absolute;
+  letter-spacing: 8px;
+  color: white;
+  position: absolute;
+  left: 100px;
+  top: 220px;
+  font-size: 27px;
+  font-weight: 100;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.grid-image {
+  width: 100%;
+  padding-bottom: 5%;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-header {
+  background-image: url(/assets/img/parallax1.jpg);
+  height: 30vh;
+  background-repeat: no-repeat;
+  /* position: relative; */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  min-height: 500px;
+}
+
+#mylogo {
+  color: white;
+  background-color: black;
+  width: 160px;
+  height: 28px;
+  position: absolute;
+  top: 22rem;
+  left: 6rem;
+  font-size: 20px;
+  letter-spacing: 6px;
+  font-weight: 100;
+}
+
+#mylogo span {
+  display: none;
+}
+
+.aboutme {
+  margin-top: 4rem;
+}
+.aboutme h3 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.aboutme h4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+#sec1 {
+  color: grey;
+}
+
+#sec1 p {
+  font-size: 12px;
+  line-height: 1.3rem;
+  text-align: justify;
+}
+
+.myname {
+  margin-top: 2rem;
+}
+
+.myname img {
+  padding: 1rem;
+}
+
+.presentation p {
+  display: none;
+}
+
+.skills h5 {
+  margin: 1rem;
+}
+
+.skills {
+  margin: auto;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skillTxt {
+  text-align: justify;
+}
+
+.skill-bar {
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  height: 20px;
+  position: relative;
+}
+
+.skill-per {
+  background-color: #535252da;
+  height: 20px;
+  border-radius: 3px;
+  line-height: 20px;
+  color: white;
+  padding: 0 5px;
+  position: absolute;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.partners {
+  background-color: #535252da;
+  color: white;
+  font-size: 13px;
+  margin-top: 2rem;
+}
+
+.partners li {
+  padding: 1rem;
+}
+
+#sec3 {
+  margin: 1rem;
+  margin-top: 3rem;
+  font-size: 12px;
+  line-height: 1.3rem;
+  text-align: justify;
+}
+
+#sec3 h4 {
+  font-size: 18px;
+  margin: 1rem;
+  color: grey;
+}
+
+#sec3 p {
+  line-height: 1.3rem;
+  font-size: 14px;
+  margin-bottom: 2rem;
+  color: grey;
+}
+
+#sec3 button {
+  margin: 2rem;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Lato-Regular", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.contact {
+  position: relative;
+  background-image: url(/assets/img/parallax3.jpg);
+  /* height: 30vh; */
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.txt-parralax2 {
+  font-weight: 100;
+  letter-spacing: 8px;
+  color: white;
+  position: absolute;
+  top: 255px;
+  left: 113px;
+  font-size: 27px;
+}
+#sec5 {
+  color: grey;
+  margin: 1rem;
+}
+
+#sec5 h4 {
+  margin: 1rem;
+  font: 18px;
+}
+
+#sec5 p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 12px;
+}
+
+#pre-form li {
+  text-align: justify;
+  margin: 0.5rem;
+  font-size: 12px;
+}
+
+#pre-form p {
+  text-align: justify;
+  margin: 0.5rem;
+  font-size: 12px;
+}
+
+.form div {
+  margin: 0.1rem;
+}
+
+input {
+  text-align: justify;
+}
+
+.send {
+  display: flex;
+  justify-content: end;
+}
+
+.send button {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  margin-top: 0.5rem;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  box-shadow: -2px 12px 15px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -2px 12px 15px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 12px 15px -4px rgba(0, 0, 0, 0.75);
+  color: black;
+}
+
+.navbar-fixed-top.scrolled li {
+  color: black;
+}
+
+footer {
+  height: 22vh;
+  background-color: rgb(114, 111, 111);
+  color: white;
+  padding: 3rem;
+}
+
+.divFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.divFooter div {
+  margin-top: 1rem;
+}
+footer p {
+  color: white;
+  margin-top: 2.5rem;
+}
+
+.to-the-top {
+  background-color: #858585ac;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 576px) {
+  #navbar {
+    display: contents;
+    background-color: rgba(240, 248, 255, 0);
+    justify-content: left;
+  }
+  #navbar.is-active {
+    display: contents;
+  }
+
+  #burger {
+    display: none;
+  }
+
+  .grid-image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #portfolio-menu {
+    position: absolute;
+    top: 3rem;
+  }
+
+  #mylogo {
+    left: 14rem;
+    top: 24rem;
+    width: 288px;
+  }
+  #mylogo span {
+    display: inline;
+  }
+  .presentation h4 {
+    text-align: start;
+    margin-left: 14rem;
+  }
+  .presentation {
+    display: flex;
+  }
+
+  .presentation p {
+    display: contents;
+  }
+
+  .partners ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .grille-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .grille-img img {
+    width: 25%;
+    padding: 0.3rem;
+  }
+  #sec3 p {
+    margin-left: 5rem;
+    margin-right: 3rem;
+    text-align: center;
+  }
+
+  .map {
+    display: flex;
+  }
+
+  #portfolio-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    left: 1rem;
+    width: 90%;
+  }
+
+  #portfolio-menu img {
+    width: 20%;
+    padding: 0.1rem;
+  }
+}
