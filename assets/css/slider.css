@@ -1,0 +1,123 @@
+#slider {
+  overflow: hidden;
+  width: 90vw;
+  position: relative;
+  margin: 1rem;
+}
+#slider img {
+  width: 100%;
+  border-radius: 28px 28px 28px 28px;
+  -webkit-border-radius: 28px 28px 28px 28px;
+  -moz-border-radius: 28px 28px 28px 28px;
+}
+
+#texteA p:first-child
+#coverSlider {
+  z-index: 0;
+}
+#imgA {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#textesA {
+  z-index: 3;
+}
+#textesA,
+#textesB {
+  position: absolute;
+  bottom: .4rem;
+  left: 0;
+  /* background-color: #e3bad5bb; */
+  background: linear-gradient(175deg, #e3bad577 0%rgba(57, 10, 37, 0.257)25 80%);
+  background: -webkit-linear-gradient(175deg, #e3bad5 0%, #390a25b6 80%);
+  background: -moz-linear-gradient(175deg, #e3bad5 0%, #390a25 80%);
+  border-radius: 26px;
+  padding: 1rem ;
+  width: 100%;
+}
+
+#textesB {
+  z-index: 1;
+}
+
+/* #coverSlider {
+  } */
+
+.transSlider {
+  transition: all 0.3s;
+}
+
+.slideLeft {
+  transform: translateX(-100%);
+}
+
+/* effet de slide quand on change de musique  */
+
+.slideRight {
+  transform: translateX(+100%);
+}
+
+/* effet de fondue quand on change de musique */
+
+.fadeOut {
+  opacity: 0;
+}
+
+#prevBTN{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    margin: .5rem;
+}
+
+#nextBTN{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 900;
+    margin: .5rem;
+
+}
+
+#prevBTN:hover, #nextBTN:hover{
+    background-color: rgb(248, 244, 244);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  section {
+    width: 50%;
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #navigation img {
+    width: 10%;
+  }
+
+  #playlist {
+    width: 90%;
+  }
+
+  .item {
+    font-size: 1rem;
+  }
+}

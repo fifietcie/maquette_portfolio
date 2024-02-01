@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // Assure-toi que cette fonction est appelée après que la structure HTML soit chargée.
-function setupPortfolioMenu() {
+function setupPortFolioMenu() {
   const portfolio = document.getElementById("portfolio");
   const portfolioMenu = document.getElementById("portfolio-menu");
 
@@ -28,38 +28,66 @@ function setupPortfolioMenu() {
 //TRAITEMENT SLIDER PORTFOLIO
 
 const portfolioBtn = document.querySelector("#portfolio");
-const imgArray = [
-  "assets/img/p1.jpg",
-  "assets/img/p2.jpg",
-  "assets/img/p3.jpg",
-  "assets/img/p4.jpg",
-  "assets/img/p5.jpg",
-  "assets/img/p6.jpg",
-  "assets/img/p7.jpg",
-  "assets/img/p8.jpg",
-]
 
-let displayModalPort = false;
-const modalPort = ()=>{
-  if(!displayModalPort){
-    const modal =document.createElement("div");
+let displayModalPort,
+  displaySlidePort = false;
+
+const modalPort = () => {
+  if (!displayModalPort) {
+    const modal = document.createElement("div");
     modal.classList.add("modalPort");
-    imgArray.forEach((elem,index)=>{
-      const img = document.createElement("img")
-      img.src = elem;
+    catalogue.forEach((elem, index) => {
+      const img = document.createElement("img");
+      img.src = elem.cover;
       modal.append(img);
       modal.classList.add("imgModal");
-      img.addEventListener("click", ()=>{
-        createPano(index)})
-    }) 
+      img.addEventListener("click", () => {
+        createPano(index);
+      });
+    });
     portfolioBtn.append(modal);
   } else {
-    document.querySelector(".modalPort").remove() 
+    document.querySelector(".modalPort").remove();
   }
   displayModalPort = !displayModalPort;
-}
+};
 
-portfolioBtn.addEventListener("click",modalPort)
+//creation du slider et ajout de celui sur en superposition du body
+const createPano = (index = null) => {
+  console.dir(displaySlidePort);
+  if (!displaySlidePort) {
+    document.body.style.maxHeight = "100vh";
+    document.body.style.overflow = "hidden";
+    const backSlide = document.createElement("div");
+    backSlide.classList.add("backSlide");
+    document.body.prepend(backSlide);
+    // import du slider
+    // const img = document.createElement("img");
+    // img.src = catalogue[index];
+    // img.classList.add("imgSlide");
+    // backSlide.append(img);
+
+    const divSlider = document.createElement("div");
+    divSlider.id = "slider";
+    backSlide.append(divSlider);
+    // console.log(index);
+    slider(index);
+
+    const close = document.createElement("div");
+    //close slide
+    close.textContent = "X";
+    close.classList.add("close");
+    backSlide.prepend(close);
+    close.addEventListener("click", createPano);
+  } else {
+    document.body.style.maxHeight = "auto";
+    document.body.style.overflow = "auto";
+    document.querySelector(".backSlide").remove();
+  }
+  displaySlidePort = !displaySlidePort;
+};
+
+portfolioBtn.addEventListener("click", modalPort);
 
 // Fonction qui sera appelée au scroll
 function onScroll() {
@@ -82,8 +110,4 @@ function onScroll() {
 // On attache l'événement de scroll à la fenêtre et on lui associe notre fonction
 window.addEventListener("scroll", onScroll);
 
-export { setupPortfolioMenu };
-export { toggleMenu };
-export { onScroll };
-export { modalPort };
-
+export { setupPortFolioMenu, toggleMenu, onScroll, modalPort };
