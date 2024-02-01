@@ -7,7 +7,6 @@ const stopTimer = () => {
 clearInterval(timer)
 }
 
-
 const initSlider = (index) => {
   console.log(index);
   // créer button prev
